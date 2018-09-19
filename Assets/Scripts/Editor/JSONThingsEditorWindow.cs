@@ -45,10 +45,10 @@ public class JSONThingsEditorWindow : EditorWindow {
 
 	private void LoadJSON() {
 		//GeneericUtilsEditor.LoadJSON();
-		GeneericUtilsEditor.LoadJSON(JSONFile.jsonFile);
+		GenericUtilsEditor.LoadJSON(JSONFile.jsonFile);
 	}
 
 	private void CreateJSON() {
-		GeneericUtilsEditor.CreateJSONFile();
+		GenericUtilsEditor.CreateJSONFile();
 	}
 }

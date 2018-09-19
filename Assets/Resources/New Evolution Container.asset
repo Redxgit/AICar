@@ -1,0 +1,318 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca33ed0440db174b85c9f5fa74911ba, type: 3}
+  m_Name: New Evolution Container
+  m_EditorClassIdentifier: 
+  succesfulParams:
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  - resolution: 6
+    maxAngle: 40
+    maxRayDist: 12.57454
+    distanceFactor: 2.047904
+    angleFactor: 0.257
+    speed: 4.96
+    turnSpeed: 2.5
+    dampForward: 1
+    dampRight: 0.5799
+    criticalDistance: 0.815
+    fwdCriticalDamp: 2.27
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 0
+  MutationParams: {fileID: 11400000, guid: 42c0b9c906a2cce4aaaa0bed9d86d8ec, type: 2}
+  baseParam: {fileID: 11400000, guid: 026b15fa59d3b4549942a9026cdfe32f, type: 2}
+  ChanceToGrabFromOthers: 1
+  TopToKeep: 20

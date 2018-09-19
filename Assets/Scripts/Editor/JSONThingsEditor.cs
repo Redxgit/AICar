@@ -41,7 +41,8 @@ public class JSONAICarParameters {
 	}
 }
 
-public class GeneericUtilsEditor {
+
+public static class GenericUtilsEditor {
 	/// <summary>
 	/// Return list of all assets of the given type
 	/// </summary>
@@ -59,6 +60,48 @@ public class GeneericUtilsEditor {
 		}
 
 		return assets;
+	}
+
+	public static List<AICarParms> TryToAdd(List<AICarParms> origen, AICarParms newParam) {
+		int indexOfWorst = 0;
+		float timeOfWorst = 0;
+
+		for (int i = 0; i < origen.Count; i++) {
+			if (origen[i].timeToComplete > timeOfWorst) {
+				indexOfWorst = i;
+				timeOfWorst = origen[i].timeToComplete;
+			}
+		}
+
+		if (newParam.timeToComplete < timeOfWorst) {
+			origen.RemoveAt(indexOfWorst);
+			origen.Add(newParam);
+		}
+
+		return origen;
+	}
+
+	public static List<AICarParms> FilterToTop(List<AICarParms> origen, int numberOfItemsToKeep) {
+		int indexOfWorst =0;
+		float timeOfWorst = 0;
+		int elemsKept = 0;
+
+		for (int i = origen.Count; i > 0; i--) {
+			if (origen[i].timeToComplete > timeOfWorst) {
+				if (elemsKept >= numberOfItemsToKeep) {
+					timeOfWorst = origen[indexOfWorst].timeToComplete;
+					origen.RemoveAt(i);
+				}
+				else {
+					indexOfWorst = i;
+				}
+			}
+			else {
+				elemsKept++;
+			}
+		}
+
+		return origen;
 	}
 
 	public static T CreateAsset<T>(string path, string name) where T : ScriptableObject {

@@ -20,7 +20,10 @@
             <e p="JSONThingsEditor.cs" t="Include" />
             <e p="JSONThingsEditorWindow.cs" t="Include" />
           </e>
+          <e p="EvolutionContainer.cs" t="Include" />
+          <e p="EvolutionManager.cs" t="Include" />
           <e p="PixelColorAtPos.cs" t="Include" />
+          <e p="SimulationManager.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

@@ -8,6 +8,7 @@ public class CarAI : MonoBehaviour {
 
 	[SerializeField] private Transform rayDir;
 	[SerializeField] private LayerMask mask;
+	[SerializeField] private EvolutionManager manager;
 
 	private int resolution;
 	private int maxAngle;
@@ -21,7 +22,8 @@ public class CarAI : MonoBehaviour {
 	private float criticalDistance;
 	private float fwdCriticalDamp;
 
-	[SerializeField] private AICarParameters parameters;
+	//[SerializeField] private AICarParameters parameters;
+	public AICarParms parameters;
 
 	[SerializeField] private Rigidbody2D rBody;
 
@@ -47,6 +49,8 @@ public class CarAI : MonoBehaviour {
 		dampRight = parameters.dampRight;
 		criticalDistance = parameters.criticalDistance;
 		fwdCriticalDamp = parameters.fwdCriticalDamp;
+		
+		rayInfoStruct = new RayInfo[resolution];
 	}
 
 	private void OnDrawGizmo() {
@@ -176,6 +180,16 @@ public class CarAI : MonoBehaviour {
 	}
 
 	public void DieAndReset() {
+		transform.SetPositionAndRotation(initPos, initRot);
+	}
+
+	public void TellMngerDied() {
+		manager.CarDied();
+	}
+
+	public void EndRaceAndMutate(AICarParms newParams) {
+		parameters = newParams;
+		LoadValues();
 		transform.SetPositionAndRotation(initPos, initRot);
 	}
 

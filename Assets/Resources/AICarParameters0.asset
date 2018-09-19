@@ -11,16 +11,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1794e7544b9a6f349ba92498ee3689af, type: 3}
   m_Name: AICarParameters0
   m_EditorClassIdentifier: 
-  resolution: 5
-  maxAngle: 60
-  maxRayDist: 10
-  distanceFactor: 2
-  angleFactor: 0.1
-  speed: 5
-  turnSpeed: 5
-  dampForward: 1.1
-  dampRight: 0.5
-  criticalDistance: 3
-  fwdCriticalDamp: 2
+  resolution: 6
+  maxAngle: 40
+  maxRayDist: 12.57454
+  distanceFactor: 2.047904
+  angleFactor: 0.257
+  speed: 4.96
+  turnSpeed: 2.5
+  dampForward: 1
+  dampRight: 0.5799
+  criticalDistance: 0.815
+  fwdCriticalDamp: 2.27
   Description: Completes the level
   ID: 0
+  completesTrack: 1
+  timeToComplete: 0

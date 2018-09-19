@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Redx\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Redx\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_AICar.1253998016.00" t="ExcludeRecursive" />
-    <e p="D:\Redx\Desktop\UnityUAH\AICar\AICar" t="IncludeRecursive">
+    <e p="C:\Users\Redx\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_AICar.-2104044848.00" t="ExcludeRecursive" />
+    <e p="D:\Redx\Desktop\UnityUAH\AICar\AICar\AICar" t="IncludeRecursive">
       <e p="AICar.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CarAI.cs" t="Include" />
         <e p="CreateSpriteFromPNG.cs" t="Include" />
         <e p="KillOnCollision.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="AICarParameters.cs" t="Include" />
           <e p="CameraFollow.cs" t="Include" />
           <e p="Car2DController.cs" t="Include" />
           <e p="CarController2D.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="JSONThingsEditor.cs" t="Include" />
+            <e p="JSONThingsEditorWindow.cs" t="Include" />
+          </e>
           <e p="PixelColorAtPos.cs" t="Include" />
         </e>
       </e>

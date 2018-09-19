@@ -4,27 +4,24 @@ using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 
 public class CarAI : MonoBehaviour {
-	[SerializeField] private int resolution;
-
-	[SerializeField] private int maxAngle;
-
-	[SerializeField] private float maxRayDist;
-
 	[SerializeField] private Transform rayOrigin;
 
 	[SerializeField] private Transform rayDir;
 	[SerializeField] private LayerMask mask;
 
-	[SerializeField] private float distanceFactor;
-	[SerializeField] private float angleFactor;
+	private int resolution;
+	private int maxAngle;
+	private float maxRayDist;
+	private float distanceFactor;
+	private float angleFactor;
+	private float speed = 1f;
+	private float turnSpeed = 1f;
+	private float dampForward;
+	private float dampRight;
+	private float criticalDistance;
+	private float fwdCriticalDamp;
 
-	[SerializeField] private float speed = 1f;
-	[SerializeField] private float turnSpeed = 1f;
-
-	[SerializeField] private float dampForward;
-	[SerializeField] private float dampRight;
-	[SerializeField] private float criticalDistance;
-	[SerializeField] private float fwdCriticalDamp;
+	[SerializeField] private AICarParameters parameters;
 
 	[SerializeField] private Rigidbody2D rBody;
 
@@ -36,6 +33,21 @@ public class CarAI : MonoBehaviour {
 
 	private RayInfo[] rayInfoStruct;
 	// Use this for initialization
+
+	private void LoadValues() {
+		resolution = parameters.resolution;
+		maxAngle = parameters.maxAngle;
+
+		maxRayDist = parameters.maxRayDist;
+		distanceFactor = parameters.distanceFactor;
+		angleFactor = parameters.angleFactor;
+		speed = parameters.speed;
+		turnSpeed = parameters.turnSpeed;
+		dampForward = parameters.dampForward;
+		dampRight = parameters.dampRight;
+		criticalDistance = parameters.criticalDistance;
+		fwdCriticalDamp = parameters.fwdCriticalDamp;
+	}
 
 	private void OnDrawGizmo() {
 		Gizmos.color = Color.cyan;
@@ -81,6 +93,7 @@ public class CarAI : MonoBehaviour {
 	}
 
 	void Start() {
+		LoadValues();
 		initPos = transform.position;
 		initRot = transform.rotation;
 		rayInfoStruct = new RayInfo[resolution];

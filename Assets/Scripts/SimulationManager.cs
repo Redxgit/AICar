@@ -5,92 +5,112 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SimulationManager : MonoBehaviour {
-	[SerializeField] private int numberOfSimulations;
-	[SerializeField] private GameObject evolutionPrefab;
+    [SerializeField] private int numberOfSimulations;
+    [SerializeField] private GameObject evolutionPrefab;
 
-	[SerializeField] private CameraFollow cf;
+    [SerializeField] private CameraFollow cf;
 
-	[SerializeField] public float targetTimeScale;
+    [SerializeField] public float targetTimeScale;
 
-	[SerializeField] private Text bestTime;
-	[SerializeField] private Text carsReaching;
-	[SerializeField] private Text carsCrashed;
-	[SerializeField] private Text carsSpawned;
-	[SerializeField] private GraphController gc;
-	[SerializeField] private EvolutionContainer cont;
+    [SerializeField] private Text bestTime;
+    [SerializeField] private Text carsReaching;
+    [SerializeField] private Text carsCrashed;
+    [SerializeField] private Text carsSpawned;
+    [SerializeField] private GraphController gc;
+    [SerializeField] private EvolutionContainer cont;
 
-	public bool ResetOnStart;
+    public bool ResetOnStart;
 
-	private float bestTimef = Mathf.Infinity;
-	private int carsRint;
-	private int carsCint;
-	private int carsSpawne;
+    private float bestTimef = Mathf.Infinity;
+    private int carsRint;
+    private int carsCint;
+    private int carsSpawne;
 
-	// Use this for initialization
-	void Start() {
+    private GameObject[] gos;
 
-		if (ResetOnStart) {
-			cont.ResetData();
-		}
-		
-		for (int i = 0; i < numberOfSimulations; i++) {
-			if (i == 0) {
-				GameObject go = Instantiate(evolutionPrefab, Vector3.zero, Quaternion.identity, transform);
-				EvolutionManager mn = go.GetComponentInChildren<EvolutionManager>();
-				//mn.smthHappened += ProcessCarEnded;
-				mn.sm = this;
-				//cf.target = go.transform.GetChild(0);
-				//cf.enabled = true;
-			}
-			else {
-				Instantiate(evolutionPrefab, Vector3.zero, Quaternion.identity, transform);
-			}
+    // Use this for initialization
 
-			carsSpawne++;
-		}
 
-		carsSpawned.text = carsSpawne.ToString();
-		Time.timeScale = targetTimeScale;
-	}
+    public void ResetSimulation() {
+        for (int i = 0; i < gos.Length; i++) {
+            Destroy(gos[i]);
+        }
 
-	public void CarDied() {
-		carsCint++;
-		carsCrashed.text = carsCint.ToString();
+        carsCint = 0;
+        carsSpawne = 0;
+        carsRint = 0;
+        bestTimef = Mathf.Infinity;
+        
+        carsSpawned.text = carsSpawne.ToString();
+        carsCrashed.text = carsCint.ToString();
+        carsReaching.text = carsRint.ToString();
+        bestTime.text = "N/A";
 
-		carsSpawne++;
-		carsSpawned.text = carsSpawne.ToString();
-	}
+        gc.ResetData();
+        Start();
+    }
 
-	public void CarReached(float time) {
-		carsRint++;
-		carsReaching.text = carsRint.ToString();
-		if (time < bestTimef) {
-			bestTimef = time;
-			bestTime.text = bestTimef.ToString(CultureInfo.InvariantCulture);
-		}
+    void Start() {
+        gos = new GameObject[numberOfSimulations];
 
-		carsSpawne++;
-		carsSpawned.text = carsSpawne.ToString();
-		if (gc != null && gc.enabled)
-			gc.AddTime(time);
-	}
+        if (ResetOnStart) {
+            cont.ResetData();
+        }
 
-	private void ProcessCarEnded(AICarParms p) {
-		Debug.Log("Invoked");
-		if (p.completesTrack) {
-			carsRint++;
-			carsReaching.text = carsRint.ToString();
-			if (p.timeToComplete < bestTimef) {
-				bestTimef = p.timeToComplete;
-				bestTime.text = bestTimef.ToString(CultureInfo.InvariantCulture);
-			}
-		}
-		else {
-			carsCint++;
-			carsCrashed.text = carsCint.ToString();
-		}
+        for (int i = 0; i < numberOfSimulations; i++) {
+            GameObject go = Instantiate(evolutionPrefab, Vector3.zero, Quaternion.identity, transform);
+            EvolutionManager mn = go.GetComponentInChildren<EvolutionManager>();
+            //mn.smthHappened += ProcessCarEnded;
+            mn.sm = this;
+            //cf.target = go.transform.GetChild(0);
+            //cf.enabled = true;
+            gos[i] = go;
 
-		carsSpawne++;
-		carsSpawned.text = carsSpawne.ToString();
-	}
+
+            carsSpawne++;
+        }
+
+        carsSpawned.text = carsSpawne.ToString();
+        Time.timeScale = targetTimeScale;
+    }
+
+    public void CarDied() {
+        carsCint++;
+        carsCrashed.text = carsCint.ToString();
+
+        carsSpawne++;
+        carsSpawned.text = carsSpawne.ToString();
+    }
+
+    public void CarReached(float time) {
+        carsRint++;
+        carsReaching.text = carsRint.ToString();
+        if (time < bestTimef) {
+            bestTimef = time;
+            bestTime.text = bestTimef.ToString(CultureInfo.InvariantCulture);
+        }
+
+        carsSpawne++;
+        carsSpawned.text = carsSpawne.ToString();
+        if (gc != null && gc.enabled)
+            gc.AddTime(time);
+    }
+
+    private void ProcessCarEnded(AICarParms p) {
+        Debug.Log("Invoked");
+        if (p.completesTrack) {
+            carsRint++;
+            carsReaching.text = carsRint.ToString();
+            if (p.timeToComplete < bestTimef) {
+                bestTimef = p.timeToComplete;
+                bestTime.text = bestTimef.ToString(CultureInfo.InvariantCulture);
+            }
+        } else {
+            carsCint++;
+            carsCrashed.text = carsCint.ToString();
+        }
+
+        carsSpawne++;
+        carsSpawned.text = carsSpawne.ToString();
+    }
 }

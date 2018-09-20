@@ -24,3 +24,5 @@ MonoBehaviour:
   fwdCriticalDamp: 2
   Description: HUEHUEHEUE
   ID: 1
+  completesTrack: 0
+  timeToComplete: 0

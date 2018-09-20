@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Redx\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Redx\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_AICar.-2104044848.00" t="ExcludeRecursive" />
-    <e p="D:\Redx\Desktop\UnityUAH\AICar\AICar\AICar" t="IncludeRecursive">
+    <e p="C:\Users\Redx\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_AICar.-1046570799.00" t="ExcludeRecursive" />
+    <e p="D:\UnityUAH\AICar\AICar" t="IncludeRecursive">
       <e p="AICar.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -27,6 +27,7 @@
           </e>
           <e p="EvolutionContainer.cs" t="Include" />
           <e p="EvolutionManager.cs" t="Include" />
+          <e p="MutationParams.cs" t="Include" />
           <e p="PixelColorAtPos.cs" t="Include" />
           <e p="SimulationManager.cs" t="Include" />
         </e>

@@ -24,6 +24,11 @@ public class GraphController : MonoBehaviour {
 	//private float maxY;
 //
 	// Use this for initialization
+
+	public void ResetData() {
+		Start();
+	}
+	
 	void Start() {
 		bestTimes = new List<float>();
 		rts = new List<RectTransform>();

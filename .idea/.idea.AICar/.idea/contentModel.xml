@@ -10,6 +10,11 @@
       <e p="Assets" t="Include">
         <e p="CarAI.cs" t="Include" />
         <e p="CreateSpriteFromPNG.cs" t="Include" />
+        <e p="Graph" t="Include">
+          <e p="ColoredPoint.shader" t="Include" />
+          <e p="Graph.cs" t="Include" />
+        </e>
+        <e p="GraphController.cs" t="Include" />
         <e p="KillOnCollision.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AICarParameters.cs" t="Include" />

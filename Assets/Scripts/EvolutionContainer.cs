@@ -40,10 +40,10 @@ public class EvolutionContainer : ScriptableObject {
 	public void FilterToTop() {
 		succesfulParams = FilterToTop(succesfulParams, TopToKeep);
 	}
-	
+
 	[ContextMenu("FilterErrors")]
 	public void FilterErrors() {
-		for (int i = succesfulParams.Count-1; i > 0; i--) {
+		for (int i = succesfulParams.Count - 1; i > 0; i--) {
 			if (succesfulParams[i].timeToComplete < 10) {
 				succesfulParams.RemoveAt(i);
 			}
@@ -61,12 +61,66 @@ public class EvolutionContainer : ScriptableObject {
 		//parameters = new List<AICarParms> {baseParam.ToCarParams()};
 		if (baseParam.completesTrack) {
 			succesfulParams = new List<AICarParms> {baseParam.ToCarParams()};
-		//	failedParms = new List<AICarParms>();
+			//	failedParms = new List<AICarParms>();
 		}
 		else {
-		//	failedParms = new List<AICarParms> {baseParam.ToCarParams()};
+			//	failedParms = new List<AICarParms> {baseParam.ToCarParams()};
 			succesfulParams = new List<AICarParms>();
 		}
+	}
+
+	public AICarParms RandomizeParams() {
+		int newResolution = Random.Range(
+			MutationParams.resolutionFactorMinMax.y,
+			MutationParams.resolutionFactorMinMax.z);
+
+		int newMaxAngle = Random.Range(
+			MutationParams.maxAngleFactorMinMax.y,
+			MutationParams.maxAngleFactorMinMax.z);
+
+		float newMaxRayDist = Random.Range(
+			MutationParams.maxRayDistFactorMinMax.y,
+			MutationParams.maxRayDistFactorMinMax.z);
+
+		float newDistanceFactor = Random.Range(
+			MutationParams.distanceFactorMinMax.y,
+			MutationParams.distanceFactorMinMax.z);
+
+		float newAngleFactor = Random.Range(
+			MutationParams.angleFactorMinMax.y,
+			MutationParams.angleFactorMinMax.z);
+
+		float newSpeed = Random.Range(
+			MutationParams.speedFactorMinMax.y,
+			MutationParams.speedFactorMinMax.z);
+
+		float turnSpeed = Random.Range(
+			MutationParams.turnSpeedFactorMinMax.y,
+			MutationParams.turnSpeedFactorMinMax.z);
+
+		float newDampForward = Random.Range(
+			MutationParams.dampForwardFactorMinMax.y,
+			MutationParams.dampForwardFactorMinMax.z);
+
+		float newDampRight = Random.Range(
+			MutationParams.dampRightFactorMinMax.y,
+			MutationParams.dampRightFactorMinMax.z);
+
+		float newCriticalDistance = Random.Range(
+			MutationParams.criticalDistanceFactorMinMax.y,
+			MutationParams.criticalDistanceFactorMinMax.z);
+
+		float fwdCriticalDamp = Random.Range(
+			MutationParams.fwdCriticalDampFactorMinMax.y,
+			MutationParams.fwdCriticalDampFactorMinMax.z);
+
+
+		AICarParms newParam = new AICarParms(newResolution, newMaxAngle, newMaxRayDist, newDistanceFactor,
+			newAngleFactor, newSpeed, turnSpeed, newDampForward, newDampRight, newCriticalDistance, fwdCriticalDamp);
+
+		//parameters.Add(newParam);
+
+		return newParam;
 	}
 
 	public AICarParms Mutate2(AICarParms prevPara) {
@@ -79,7 +133,7 @@ public class EvolutionContainer : ScriptableObject {
 		}
 
 		AICarParms newParam = new AICarParms();
-		if (Random.Range(0, 10) < ChanceToGrabFromOthers ) {
+		if (Random.Range(0, 10) < ChanceToGrabFromOthers) {
 			return GrabFromOthers(newParam);
 		}
 
@@ -171,7 +225,7 @@ public class EvolutionContainer : ScriptableObject {
 
 	public AICarParms Mutate(AICarParms previousIteration) {
 		if (previousIteration.completesTrack) {
-			succesfulParams.Add(previousIteration);
+			//succesfulParams.Add(previousIteration);
 		}
 		else {
 			//failedParms.Add(previousIteration);
@@ -242,16 +296,16 @@ public class EvolutionContainer : ScriptableObject {
 	}
 
 	public static List<AICarParms> TryToAdd(List<AICarParms> origen, AICarParms newParam, int maxItems) {
-
 		List<AICarParms> tempList = origen;
 		//Debug.Log(maxItems + " " + tempList.Count);
-		
+
 		if (maxItems > tempList.Count) {
 			tempList.Add(newParam);
 			Debug.Log("AddUntil20");
 			return tempList;
 		}
-		Debug.Log("Check if best");
+
+		Debug.Log("Check if better");
 		int indexOfWorst = 0;
 		float timeOfWorst = 0;
 
@@ -270,6 +324,7 @@ public class EvolutionContainer : ScriptableObject {
 		else {
 			Debug.Log("Sucked");
 		}
+
 		return tempList;
 	}
 
@@ -278,7 +333,7 @@ public class EvolutionContainer : ScriptableObject {
 		float timeOfWorst = 0;
 		int elemsKept = 0;
 
-		for (int i = origen.Count-1; i > 0; i--) {
+		for (int i = origen.Count - 1; i > 0; i--) {
 			if (origen[i].timeToComplete > timeOfWorst) {
 				if (elemsKept >= numberOfItemsToKeep) {
 					timeOfWorst = origen[indexOfWorst].timeToComplete;

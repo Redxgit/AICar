@@ -36,7 +36,7 @@ public class CarAI : MonoBehaviour {
 	private RayInfo[] rayInfoStruct;
 	// Use this for initialization
 
-	private void LoadValues() {
+	public void LoadValues() {
 		resolution = parameters.resolution;
 		maxAngle = parameters.maxAngle;
 
@@ -103,6 +103,11 @@ public class CarAI : MonoBehaviour {
 		rayInfoStruct = new RayInfo[resolution];
 	}
 
+	private void OnEnable() {
+		if (resolution == 0)
+			LoadValues();
+	}
+
 	// Update is called once per frame
 	void Update() {
 		RaycastHit2D hit;
@@ -132,7 +137,11 @@ public class CarAI : MonoBehaviour {
 
 	private void FixedUpdate() {
 		ProcessRayInfo();
-		rBody.AddForce(transform.up * generatedVertical * speed);
+		try {
+			rBody.AddForce(transform.up * generatedVertical * speed);
+		}
+		catch { Debug.Log(transform.up * generatedVertical * speed, gameObject);}
+
 		//rBody.AddForce(transform.right * horizontal * horizontalVelocity);
 		//rBody.AddTorque(horizontal * turnSpeed * -1f);
 		rBody.angularVelocity = generatedHorizontal * turnSpeed * -1f;

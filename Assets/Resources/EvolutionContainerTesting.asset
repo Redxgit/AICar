@@ -1,0 +1,318 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca33ed0440db174b85c9f5fa74911ba, type: 3}
+  m_Name: EvolutionContainerTesting
+  m_EditorClassIdentifier: 
+  succesfulParams:
+  - resolution: 8
+    maxAngle: 54
+    maxRayDist: 14.729972
+    distanceFactor: 3.240909
+    angleFactor: 1.4763639
+    speed: 10
+    turnSpeed: 2.6705883
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 7.5589232
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 11.9999695
+  - resolution: 8
+    maxAngle: 51
+    maxRayDist: 14.395417
+    distanceFactor: 4.28039
+    angleFactor: 1.3577641
+    speed: 10
+    turnSpeed: 2.4913476
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.168405
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 11.9999695
+  - resolution: 7
+    maxAngle: 65
+    maxRayDist: 13.88394
+    distanceFactor: 3.2237794
+    angleFactor: 1.4548345
+    speed: 10
+    turnSpeed: 2.9634256
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 9.069594
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.059937
+  - resolution: 7
+    maxAngle: 62
+    maxRayDist: 14.184737
+    distanceFactor: 3.8815773
+    angleFactor: 1.4880807
+    speed: 10
+    turnSpeed: 3
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.937539
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0399475
+  - resolution: 8
+    maxAngle: 61
+    maxRayDist: 13.957503
+    distanceFactor: 3.823217
+    angleFactor: 1.3917884
+    speed: 10
+    turnSpeed: 2.6705883
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.428223
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0399475
+  - resolution: 8
+    maxAngle: 61
+    maxRayDist: 14.395417
+    distanceFactor: 3.8815773
+    angleFactor: 1.4476488
+    speed: 10
+    turnSpeed: 2.6705883
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.111181
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0199585
+  - resolution: 9
+    maxAngle: 61
+    maxRayDist: 13.88394
+    distanceFactor: 3.823217
+    angleFactor: 1.4178455
+    speed: 10
+    turnSpeed: 3
+    dampForward: 1
+    dampRight: 0.510197
+    criticalDistance: 8.605637
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0399475
+  - resolution: 7
+    maxAngle: 61
+    maxRayDist: 14.395417
+    distanceFactor: 3.240909
+    angleFactor: 1.4264623
+    speed: 10
+    turnSpeed: 2.6705883
+    dampForward: 1
+    dampRight: 0.510197
+    criticalDistance: 8.495607
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0199585
+  - resolution: 9
+    maxAngle: 62
+    maxRayDist: 13.034327
+    distanceFactor: 3.4937127
+    angleFactor: 1.4267136
+    speed: 10
+    turnSpeed: 2.7594712
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.548569
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0399475
+  - resolution: 9
+    maxAngle: 62
+    maxRayDist: 14.726474
+    distanceFactor: 3.94989
+    angleFactor: 1.3961695
+    speed: 10
+    turnSpeed: 2.0554457
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 7.8100185
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.059937
+  - resolution: 9
+    maxAngle: 62
+    maxRayDist: 13.957503
+    distanceFactor: 3.8815773
+    angleFactor: 1.4476488
+    speed: 10
+    turnSpeed: 2.4913476
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 9.069594
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 11.9999695
+  - resolution: 9
+    maxAngle: 65
+    maxRayDist: 14.953232
+    distanceFactor: 2.9210706
+    angleFactor: 1.4491571
+    speed: 10
+    turnSpeed: 2.435108
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.102619
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0199585
+  - resolution: 8
+    maxAngle: 52
+    maxRayDist: 13.805808
+    distanceFactor: 3.658382
+    angleFactor: 1.3874103
+    speed: 10
+    turnSpeed: 2.2087252
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 9.436102
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0399475
+  - resolution: 8
+    maxAngle: 61
+    maxRayDist: 13.957503
+    distanceFactor: 3.658382
+    angleFactor: 1.4267136
+    speed: 10
+    turnSpeed: 2.529964
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.605637
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.059937
+  - resolution: 9
+    maxAngle: 61
+    maxRayDist: 14.184737
+    distanceFactor: 3.240909
+    angleFactor: 1.4264623
+    speed: 10
+    turnSpeed: 2.4913476
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.548569
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0401
+  - resolution: 8
+    maxAngle: 58
+    maxRayDist: 13.720706
+    distanceFactor: 3.8929915
+    angleFactor: 1.4476893
+    speed: 10
+    turnSpeed: 2.5419466
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.446097
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 11.959991
+  - resolution: 9
+    maxAngle: 54
+    maxRayDist: 13.957503
+    distanceFactor: 3.515354
+    angleFactor: 1.3917884
+    speed: 10
+    turnSpeed: 2.6705883
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 9.069594
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0399475
+  - resolution: 9
+    maxAngle: 66
+    maxRayDist: 13.127274
+    distanceFactor: 3.013772
+    angleFactor: 1.410794
+    speed: 9.998249
+    turnSpeed: 2.4772754
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.083704
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0199585
+  - resolution: 8
+    maxAngle: 61
+    maxRayDist: 14.395417
+    distanceFactor: 3.658382
+    angleFactor: 1.4763639
+    speed: 10
+    turnSpeed: 2.529964
+    dampForward: 1
+    dampRight: 0.5
+    criticalDistance: 8.446097
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0399475
+  - resolution: 9
+    maxAngle: 61
+    maxRayDist: 14.729972
+    distanceFactor: 3.823217
+    angleFactor: 1.4264623
+    speed: 10
+    turnSpeed: 2.529964
+    dampForward: 1
+    dampRight: 0.510197
+    criticalDistance: 8.605637
+    fwdCriticalDamp: 0.5
+    Description: 
+    ID: 0
+    completesTrack: 1
+    timeToComplete: 12.0399475
+  MutationParams: {fileID: 11400000, guid: d7efed506914ab647926e1543dd862c3, type: 2}
+  baseParam: {fileID: 11400000, guid: 026b15fa59d3b4549942a9026cdfe32f, type: 2}
+  ChanceToGrabFromOthers: 1
+  TopToKeep: 20

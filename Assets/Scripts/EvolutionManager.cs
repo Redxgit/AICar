@@ -48,8 +48,10 @@ public class EvolutionManager : MonoBehaviour {
 	private void Update() {
 		if (startingTime + timeToSuicide < Time.unscaledTime) {
 			startingTime = Time.unscaledTime;
-			car.parameters = evo.RandomizeParams();
-			car.DieAndReset();
+			//car.parameters = evo.RandomizeParams();
+			//car.LoadValues();
+			//car.DieAndReset();
+			car.EndRaceAndMutate(evo.Mutate2(car.parameters));
 			if (sm == null) {
 				sm = FindObjectOfType<SimulationManager>();
 			}
@@ -66,8 +68,9 @@ public class EvolutionManager : MonoBehaviour {
 			    Vector3.Distance(other.transform.position, p2.transform.position)) {
 				Debug.Log("Facing wrong");
 				car.parameters = evo.RandomizeParams();
-				
-				car.DieAndReset();
+				//car.LoadValues();
+				//car.DieAndReset();
+				car.EndRaceAndMutate(evo.Mutate2(car.parameters));
 				if (sm == null) {
 					sm = FindObjectOfType<SimulationManager>();
 				}
@@ -80,7 +83,9 @@ public class EvolutionManager : MonoBehaviour {
 			timeToComplete = (Time.unscaledTime - startingTime) * Time.timeScale;
 			if (timeToComplete < 1f) {
 				car.parameters = evo.RandomizeParams();
-				car.DieAndReset();
+				//car.LoadValues();
+				//car.DieAndReset();
+				car.EndRaceAndMutate(evo.Mutate2(car.parameters));
 				car.parameters.completesTrack = false;
 				if (sm == null) {
 					sm = FindObjectOfType<SimulationManager>();

@@ -25,8 +25,28 @@ public class SimulationManager2 : MonoBehaviour {
     private int carsSpawne;
 
     private GameObject[] gos;
+    
+    [SerializeField] private Text textToToggle;
+
+    private const string pause = "Pause";
+    private const string continued = "Continue";
+
+    private bool paused;
 
     // Use this for initialization
+
+    public void ToggleStatusSimulation() {
+        if (paused) {
+            Time.timeScale = targetTimeScale;
+            textToToggle.text = pause;
+        }
+        else {
+            Time.timeScale = 0;
+            textToToggle.text = continued;
+        }
+
+        paused = !paused;
+    }
 
 
     public void ResetSimulation() {
@@ -43,6 +63,9 @@ public class SimulationManager2 : MonoBehaviour {
         carsCrashed.text = carsCint.ToString();
         carsReaching.text = carsRint.ToString();
         bestTime.text = "N/A";
+        Time.timeScale = targetTimeScale;
+        paused = false;
+        textToToggle.text = pause;
 
         gc.ResetData();
         Start();

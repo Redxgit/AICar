@@ -26,7 +26,7 @@ public class EvolutionManager : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        startingTime = Time.unscaledTime;
+        startingTime = Time.time;
         //car.parameters = evo.baseParam.ToCarParams();
         if (RandomizeInit) {
             car.parameters = evo.RandomizeParams();
@@ -43,8 +43,8 @@ public class EvolutionManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (startingTime + timeToSuicide < Time.unscaledTime) {
-            startingTime = Time.unscaledTime;
+        if (startingTime + timeToSuicide < Time.time) {
+            startingTime = Time.time;
             //car.parameters = evo.RandomizeParams();
             //car.LoadValues();
             //car.DieAndReset();
@@ -70,7 +70,7 @@ public class EvolutionManager : MonoBehaviour {
                 return;
             }
 
-            timeToComplete = (Time.unscaledTime - startingTime) * Time.timeScale;
+            timeToComplete = (Time.time - startingTime) * Time.timeScale;
             if (timeToComplete < 1f) {
                 car.parameters = evo.RandomizeParams();
                 //car.LoadValues();
@@ -83,7 +83,7 @@ public class EvolutionManager : MonoBehaviour {
             }
 
             car.parameters.timeToComplete = timeToComplete;
-            startingTime = Time.unscaledTime;
+            startingTime = Time.time;
             car.parameters.completesTrack = true;
             sm.CarReached(timeToComplete);
             //	smthHappened.Invoke(car.parameters);
@@ -93,7 +93,7 @@ public class EvolutionManager : MonoBehaviour {
 
     public void CarDied() {
         Debug.Log("Car crashed");
-        startingTime = Time.unscaledTime;
+        startingTime = Time.time;
         car.parameters.completesTrack = false;
         //	smthHappened.Invoke(car.parameters);
         sm.CarDied();

@@ -301,11 +301,9 @@ public class EvolutionContainer : ScriptableObject {
 
 		if (maxItems > tempList.Count) {
 			tempList.Add(newParam);
-			Debug.Log("AddUntil20");
 			return tempList;
 		}
 
-		Debug.Log("Check if better");
 		int indexOfWorst = 0;
 		float timeOfWorst = 0;
 
@@ -319,10 +317,8 @@ public class EvolutionContainer : ScriptableObject {
 		if (newParam.timeToComplete < timeOfWorst) {
 			tempList.RemoveAt(indexOfWorst);
 			tempList.Add(newParam);
-			Debug.Log("was good");
 		}
 		else {
-			Debug.Log("Sucked");
 		}
 
 		return tempList;
